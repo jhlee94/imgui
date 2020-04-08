@@ -6,3 +6,8 @@ set(IMGUI_HEADERS imconfig.h imgui.h imgui_internal.h imstb_rectpack.h imstb_tex
 set(IMGUI_SOURCES imgui.cpp imgui_demo.cpp imgui_draw.cpp imgui_widgets.cpp)
 
 add_library(imgui STATIC ${IMGUI_HEADERS} ${IMGUI_SOURCES})
+
+set_target_properties(imgui PROPERTIES
+                      OUTPUT_NAME imgui
+                      POSITION_INDEPENDENT_CODE ON
+                      FOLDER "ImGui")
